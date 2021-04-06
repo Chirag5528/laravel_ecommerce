@@ -14,8 +14,12 @@ class CreateProductSubCategoryTable extends Migration
     public function up()
     {
         Schema::create('product_sub_category', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('name');
+            $table->tinyInteger('status')->default(1);
+            $table->foreign('category_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
