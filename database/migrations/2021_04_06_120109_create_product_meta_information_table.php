@@ -14,11 +14,11 @@ class CreateProductMetaInformationTable extends Migration
     public function up()
     {
         Schema::create('product_meta_information', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->text('name')->nullable();
             $table->text('keywords')->nullable();
             $table->text('description')->nullable();
-            $table->foreign('product_id');
+            // $table->foreign('product_id')->references('id')->on('product');
             $table->timestamps();
             $table->softDeletes();
         });

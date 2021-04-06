@@ -17,7 +17,7 @@ class CreateProductImageTable extends Migration
             $table->increments('id');
             $table->string('uri');
             $table->string('cropped_uri');
-            $table->foreign('product_id');
+            // $table->foreign('product_id');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -20,7 +20,7 @@ class CreateProductPriceTable extends Migration
             $table->string('special_price');
             $table->date('special_price_from');
             $table->date('special_price_to');
-            $table->foreign('product_id');
+            // $table->foreign('product_id')->references('id')->on('product');
             $table->timestamps();
             $table->softDeletes();
         });

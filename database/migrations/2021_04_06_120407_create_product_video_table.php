@@ -14,9 +14,9 @@ class CreateProductVideoTable extends Migration
     public function up()
     {
         Schema::create('product_video', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('uri');
-            $table->foreign('product_id');
+            // $table->foreign('product_id')->references('id')->on('product');
             $table->timestamps();
             $table->softDeletes();
         });

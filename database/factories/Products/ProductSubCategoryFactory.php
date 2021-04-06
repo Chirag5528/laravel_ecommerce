@@ -2,7 +2,6 @@
 
 namespace Database\Factories\Products;
 
-use App\Models\Model;
 use App\Models\Products\ProductSubCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -25,7 +24,7 @@ class ProductSubCategoryFactory extends Factory
         return [
             'name' => $this->faker->name,
             'status' => 1,
-            'category_id' => $this->faker->numberBetween(1, 10),
+            // 'category_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

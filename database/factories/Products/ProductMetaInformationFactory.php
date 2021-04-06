@@ -2,7 +2,7 @@
 
 namespace Database\Factories\Products;
 
-use App\Models\Model;
+use App\Models\Products\ProductMetaInformation;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ProductMetaInformationFactory extends Factory
@@ -12,7 +12,7 @@ class ProductMetaInformationFactory extends Factory
      *
      * @var string
      */
-    protected $model = Model::class;
+    protected $model = ProductMetaInformation::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,10 @@ class ProductMetaInformationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'keywords' => $this->faker->unique()->words(3),
+            'description' => $this->faker->sentence(3),
+            'product_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }
