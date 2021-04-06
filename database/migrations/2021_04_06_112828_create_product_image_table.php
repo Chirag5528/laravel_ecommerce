@@ -15,7 +15,7 @@ class CreateProductImageTable extends Migration
     {
         Schema::create('product_image', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('original_uri');
+            $table->string('uri');
             $table->string('cropped_uri');
             $table->foreign('product_id');
             $table->timestamps();
