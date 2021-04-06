@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Factories\Products;
 
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -25,10 +25,10 @@ class ProductFactory extends Factory
         $name = $this->faker->name;
         return [
             'name' => $name,
-            'slug' => Str::slug( $name ),
-            'product_category_id' => $this->faker->numberBetween(0,10),
-            'product_sub_category_id' => $this->faker->numberBetween(0,10),
-            'quantity' => $this->faker->numberBetween(0,10)
+            'slug' => Str::slug($name),
+            'product_category_id' => $this->faker->numberBetween(0, 10),
+            'product_sub_category_id' => $this->faker->numberBetween(0, 10),
+            'quantity' => $this->faker->numberBetween(0, 10)
         ];
     }
 }
