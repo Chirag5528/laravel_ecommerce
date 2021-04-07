@@ -26,9 +26,9 @@ class ProductFactory extends Factory
         return [
             'name' => $name,
             'slug' => strtolower($name),
-            'product_category_id' => $this->faker->numberBetween(0, 10),
-            'product_sub_category_id' => $this->faker->numberBetween(0, 10),
-            'quantity' => $this->faker->numberBetween(0, 10)
+            'product_category_id' => $this->faker->numberBetween(1, 10),
+            'product_sub_category_id' => $this->faker->numberBetween(1, 10),
+            'quantity' => $this->faker->numberBetween(1, 10)
         ];
     }
 }

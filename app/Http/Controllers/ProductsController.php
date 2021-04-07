@@ -2,11 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Products\Product;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
+
+    protected $links;
+
+    public function __construct()
+    {
+        $this->links = [
+            [
+                'name' => 'Products',
+                'uri' => 'products',
+                'route' => route('products.index')
+            ],
+            [
+                'name' => 'Categories',
+                'uri' => 'categories',
+                'route' => route('products.index')
+            ],
+            [
+                'name' => 'Sub Categories',
+                'uri' => 'sub_categories',
+                'route' => route('products.index')
+            ],
+        ];
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +38,14 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('products.index');
+        $products = Product::with('category')->paginate();
+
+//        ddd( $products );
+
+        return view('products.index')->with( [
+            'links' => $this->links,
+            'products' => $products,
+        ]);
     }
 
     /**
@@ -24,8 +55,8 @@ class ProductsController extends Controller
      */
     public function create(Product $products)
     {
-        ddd($products);
-        return view('products.create');
+
+        return view('products.create')->with( 'links',$this->links );
     }
 
     /**

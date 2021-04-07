@@ -3167,6 +3167,9 @@ div.code-toolbar .toolbar button:hover {
     background-color: #44337a;
     background-color: rgba(68, 51, 122, var(--bg-opacity));
 }
+.bg-primary{
+ background: #0041ff;
+}
 
 .bg-pink-100{
     --bg-opacity: 1;
@@ -10590,6 +10593,10 @@ div.code-toolbar .toolbar button:hover {
     border-width: 0;
 }
 
+.border-1{
+    border-width: 1px;
+}
+
 .border-2{
     border-width: 2px;
 }
@@ -17555,6 +17562,9 @@ div.code-toolbar .toolbar button:hover {
     color: rgba(0, 0, 0, var(--text-opacity));
 }
 
+.text-custom-black{
+    color:#000311;
+}
 .text-white{
     --text-opacity: 1;
     color: #fff;
@@ -19595,6 +19605,10 @@ div.code-toolbar .toolbar button:hover {
 
 .w-72{
     width: 18rem;
+}
+
+.w-80{
+    width: 20rem;
 }
 
 .w-84{

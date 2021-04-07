@@ -28,8 +28,10 @@
     <!-- end sidbar -->
 
     <!-- strat content -->
-    <div class="bg-gray-100 flex-1 p-6 md:mt-16">
+    <div class="bg-gray-100 flex-1 md:mt-16 flex flex-row">
+        @include("layouts.partials.aside")
         @yield('matter')
+        <!-- end content -->
     </div>
     <!-- end content -->
 

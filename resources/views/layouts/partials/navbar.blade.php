@@ -1,5 +1,4 @@
-<div class="md:fixed md:w-full md:top-0 md:z-20 flex flex-row flex-wrap items-center bg-white p-6 border-b border-gray-300">
-
+<div class="md:fixed md:w-full md:top-0 md:z-20 flex flex-row flex-wrap items-center bg-white p-3 border-b border-gray-300 shadow-xl">
     <!-- logo -->
     <div class="flex-none w-56 flex flex-row items-center">
         <img src="img/logo.png" class="w-10 flex-none">
