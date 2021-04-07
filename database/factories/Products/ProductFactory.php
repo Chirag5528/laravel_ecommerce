@@ -22,10 +22,10 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
-        $name = $this->faker->name;
+        $name = $this->faker->word();
         return [
             'name' => $name,
-            'slug' => Str::slug($name),
+            'slug' => strtolower($name),
             'product_category_id' => $this->faker->numberBetween(0, 10),
             'product_sub_category_id' => $this->faker->numberBetween(0, 10),
             'quantity' => $this->faker->numberBetween(0, 10)

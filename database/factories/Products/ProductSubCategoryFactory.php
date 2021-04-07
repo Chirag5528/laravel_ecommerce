@@ -22,7 +22,7 @@ class ProductSubCategoryFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
+            'name' => $this->faker->word,
             'status' => 1,
             // 'category_id' => $this->faker->numberBetween(1, 10),
         ];

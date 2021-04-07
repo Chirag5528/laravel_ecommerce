@@ -22,10 +22,10 @@ class ProductMetaInformationFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
-            'keywords' => $this->faker->unique()->words(3),
+            'name' => $this->faker->word,
+            'keywords' => implode(",",$this->faker->words(3)),
             'description' => $this->faker->sentence(3),
-            'product_id' => $this->faker->numberBetween(1, 10),
+//            'product_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }
