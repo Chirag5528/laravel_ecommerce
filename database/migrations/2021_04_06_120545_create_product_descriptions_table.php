@@ -17,7 +17,7 @@ class CreateProductDescriptionsTable extends Migration
             $table->id();
             $table->text('short_description')->nullable()->default(null);
             $table->text('description')->nullable()->default(null);
-            // $table->foreign('product_id')->references('id')->on('product');
+            $table->foreignId('product_id');
             $table->timestamps();
             $table->softDeletes();
         });

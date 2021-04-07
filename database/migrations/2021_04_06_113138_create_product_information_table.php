@@ -13,16 +13,18 @@ class CreateProductInformationTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('product_information', function (Blueprint $table) {
             $table->id();
             $table->string('brand');
             $table->string('length')->nullable()->default(null);
             $table->string('breadth')->nullable()->default(null);
             $table->string('height')->nullable()->default(null);
-            // $table->foreign('product_id')->references('id')->on('product');
+            $table->foreignId('product_id');
             $table->timestamps();
             $table->softDeletes();
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

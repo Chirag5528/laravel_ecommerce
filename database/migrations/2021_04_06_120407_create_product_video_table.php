@@ -16,7 +16,7 @@ class CreateProductVideoTable extends Migration
         Schema::create('product_video', function (Blueprint $table) {
             $table->id();
             $table->string('uri');
-            // $table->foreign('product_id')->references('id')->on('product');
+            $table->foreignId('product_id');
             $table->timestamps();
             $table->softDeletes();
         });

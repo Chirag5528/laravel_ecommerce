@@ -17,7 +17,7 @@ class CreateProductSubCategoriesTable extends Migration
             $table->id();
             $table->string('name');
             $table->tinyInteger('status')->default(1);
-            // $table->foreign('category_id')->references('id')->on('product_category');
+            $table->foreignId('category_id');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -26,7 +26,7 @@ class ProductInformationFactory extends Factory
             'length' => $this->faker->numberBetween(1, 100),
             'breadth' => $this->faker->numberBetween(1, 100),
             'height' => $this->faker->numberBetween(1, 100),
-            // 'product_id' => $this->faker->numberBetween(1, 10),
+             'product_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

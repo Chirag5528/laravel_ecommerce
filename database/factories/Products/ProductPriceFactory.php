@@ -29,7 +29,7 @@ class ProductPriceFactory extends Factory
             'special_price' => $number * 10,
             'special_price_from' => $this->faker->dateTimeBetween('- 15 days'),
             'special_price_to' => $this->faker->dateTimeBetween('now',"+15 days"),
-//            'product_id' => $number,
+            'product_id' => $number,
         ];
     }
 }

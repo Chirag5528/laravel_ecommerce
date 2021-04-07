@@ -24,7 +24,7 @@ class ProductSubCategoryFactory extends Factory
         return [
             'name' => $this->faker->word,
             'status' => 1,
-            // 'category_id' => $this->faker->numberBetween(1, 10),
+             'category_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

@@ -24,7 +24,7 @@ class ProductDescriptionFactory extends Factory
         return [
             'short_description' => $this->faker->sentence(2),
             'description' => $this->faker->sentence(10),
-            // 'product_id' => $this->faker->numberBetween(1, 10)
+             'product_id' => $this->faker->numberBetween(1, 10)
         ];
     }
 }
