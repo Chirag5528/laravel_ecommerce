@@ -18,7 +18,7 @@ class CreateProductMetaInformationTable extends Migration
             $table->text('name')->nullable();
             $table->text('keywords')->nullable();
             $table->text('description')->nullable();
-             $table->foreignId('product_id');
+            $table->foreignId('product_id');
             $table->timestamps();
             $table->softDeletes();
         });
