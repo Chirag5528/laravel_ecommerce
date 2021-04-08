@@ -10,7 +10,7 @@
             <div class="col-span-1 grid grid-cols-2 items-baseline">
                 <div class="exportButton col-span-1"></div>
                 <div class="createButton col-span-1">
-                    <a href="{{ route('products.create')  }}" class="bg-primary text-white hover:opacity-75 opacity-1 transition-all duration-75 ease-in py-2 px-4 rounded">Add Product</a>
+                    <a href="{{ route('products.create')  }}" class="primary__button">Add Product</a>
                 </div>
             </div>
         </div>

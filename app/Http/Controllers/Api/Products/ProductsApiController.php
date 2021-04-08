@@ -1,36 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\Products;
 
+use App\Http\Controllers\Controller;
 use App\Models\Products\Product;
 use Illuminate\Http\Request;
 
-class ProductsController extends Controller
+class ProductsApiController extends Controller
 {
-
-    protected $links;
-
-    public function __construct()
-    {
-        $this->links = [
-            [
-                'name' => 'Products',
-                'uri' => 'products',
-                'route' => route('products.index')
-            ],
-            [
-                'name' => 'Categories',
-                'uri' => 'categories',
-                'route' => route('products.index')
-            ],
-            [
-                'name' => 'Sub Categories',
-                'uri' => 'sub_categories',
-                'route' => route('products.index')
-            ],
-        ];
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -38,15 +15,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::with('category')->paginate();
-        $products->withPath('/api/products/');
-
-//        ddd( $products );
-
-        return view('products.index')->with( [
-            'links' => $this->links,
-            'products' => $products,
-        ]);
+        return Product::with('category')->paginate();
     }
 
     /**
@@ -54,10 +23,9 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Product $products)
+    public function create()
     {
-
-        return view('products.create')->with( 'links',$this->links );
+        //
     }
 
     /**

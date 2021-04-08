@@ -18,3 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::prefix('/products/')->name('products.')->group(function(){
+    Route::get('',[ \App\Http\Controllers\Api\Products\ProductsApiController::class, "index" ]);
+});

@@ -19,7 +19,6 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
@@ -30,6 +29,7 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      primaryBlue: "#0041ff"
     },
     spacing: {
       px: '1px',
@@ -796,6 +796,7 @@ module.exports = {
     zIndex: {
       auto: 'auto',
       0: '0',
+      5: '5',
       10: '10',
       20: '20',
       30: '30',
@@ -938,6 +939,7 @@ module.exports = {
     scale: ['responsive', 'hover', 'focus'],
     sepia: ['responsive'],
     skew: ['responsive', 'hover', 'focus'],
+    shadow:['focus'],
     space: ['responsive'],
     stroke: ['responsive'],
     strokeWidth: ['responsive'],
