@@ -1,9 +1,9 @@
 @if( isset( $links ) )
-<div class="aside-nav w-80 border-r-2 h-full pt-3">
+<div class="aside_nav">
     <ul>
         @foreach( $links as $key => $value )
-            <li class="text-custom-black font-normal py-4 text-sm px-2  {{  (strpos( Request::path(), $value['uri'] ) !== false)  ? "bg-white border-1" : ""  }}">
-                <a href="{{ $value['route']  }}" class="flex flex-row px-1">
+            <li class="aside_nav__items  {{  (strpos( Request::path(), $value['uri'] ) !== false)  ? "active" : ""  }}">
+                <a href="{{ $value['route']  }}" class="aside_nav__items__links">
                     <span>{{  $value['name'] }}</span>
                     @if( strpos( Request::path(), strtolower($value['uri']) ) !== false )
                         <span class="ml-auto">

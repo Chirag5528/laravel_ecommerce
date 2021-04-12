@@ -17561,10 +17561,6 @@ div.code-toolbar .toolbar button:hover {
     color: #000;
     color: rgba(0, 0, 0, var(--text-opacity));
 }
-
-.text-custom-black{
-    color:#000311;
-}
 .text-white{
     --text-opacity: 1;
     color: #fff;

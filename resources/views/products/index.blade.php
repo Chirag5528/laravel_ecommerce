@@ -1,15 +1,15 @@
 @extends('layouts.app')
 @section('title','Products')
 @section('matter')
-    <div class="bg-white w-full p-6">
+    <div class="page_matter">
         <!-- congrats -->
-        <div class="grid grid-cols-3 flex-row mt-10">
-            <div class="pageTitle col-span-2">
-                <h1 class="text-4xl font-normal">Products</h1>
+        <div class="page_matter__header">
+            <div class="page_title">
+                <h1 class="heading">Products</h1>
             </div>
-            <div class="col-span-1 grid grid-cols-2 items-baseline">
-                <div class="exportButton col-span-1"></div>
-                <div class="createButton col-span-1">
+            <div class="page_action">
+                <div class="page_action__exportButton"></div>
+                <div class="page_action__createButton">
                     <a href="{{ route('products.create')  }}" class="primary__button">Add Product</a>
                 </div>
             </div>
