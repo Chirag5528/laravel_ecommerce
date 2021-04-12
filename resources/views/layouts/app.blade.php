@@ -19,14 +19,14 @@
 <!-- end navbar -->
 
 
-<!-- strat wrapper -->
+<!-- start wrapper -->
 <div class="content_wrapper">
 
     <!-- start sidebar -->
     @include('layouts.partials.sidebar')
-    <!-- end sidbar -->
+    <!-- end sidebar -->
 
-    <!-- strat content -->
+    <!-- start content -->
     <div class="content">
         @include("layouts.partials.aside")
         @yield('matter')
