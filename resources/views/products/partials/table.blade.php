@@ -93,7 +93,12 @@
                             </td>
                             <td class="table__td">
                                 <div class="table__td_text">
-                                    <span><a href=""></a></span>
+                                    <span class="text-yellow-500">
+                                        <a href="{{route('products.edit',$product->id)}}"><i class="fa fa-pencil"></i></a>
+                                    </span>
+                                    <span class="text-red-500">
+                                        <a href="{{route('products.edit',['id' => $product->id])}}"><i class="fa fa-trash"></i></a>
+                                    </span>
                                 </div>
                             </td>
                         </tr>

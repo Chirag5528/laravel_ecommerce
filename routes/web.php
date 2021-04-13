@@ -24,4 +24,5 @@ Route::prefix('/dashboard/')->name('dashboard.')->group(function() {
 Route::prefix('/products/')->name('products.')->group(function(){
    Route::get('',[\App\Http\Controllers\ProductsController::class, 'index'])->name('index');
    Route::get('create',[\App\Http\Controllers\ProductsController::class, 'create'])->name('create');
+   Route::get('{product}/edit',[\App\Http\Controllers\ProductsController::class, 'edit'])->name('edit');
 });

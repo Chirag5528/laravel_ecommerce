@@ -8,29 +8,6 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
 
-    protected $links;
-
-    public function __construct()
-    {
-        $this->links = [
-            [
-                'name' => 'Products',
-                'uri' => 'products',
-                'route' => route('products.index')
-            ],
-            [
-                'name' => 'Categories',
-                'uri' => 'categories',
-                'route' => route('products.index')
-            ],
-            [
-                'name' => 'Sub Categories',
-                'uri' => 'sub_categories',
-                'route' => route('products.index')
-            ],
-        ];
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -53,7 +30,7 @@ class ProductsController extends Controller
     public function create(Product $products)
     {
 
-        return view('products.create')->with( 'links',$this->links );
+        return view('products.create');
     }
 
     /**
@@ -73,9 +50,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        //
+        return $product;
     }
 
     /**
@@ -84,9 +61,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        //
+        return view('products.create',compact('product'));
     }
 
     /**
