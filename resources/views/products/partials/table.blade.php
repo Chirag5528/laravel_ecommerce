@@ -92,7 +92,9 @@
                                 <div class="table__td_text">{{ $product->price->price  }}</div>
                             </td>
                             <td class="table__td">
-                                <div class="table__td_text">{{ $product['quantity']  }}</div>
+                                <div class="table__td_text">
+                                    <span><a href=""></a></span>
+                                </div>
                             </td>
                         </tr>
                     @endforeach

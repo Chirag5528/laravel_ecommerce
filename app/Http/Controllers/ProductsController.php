@@ -39,12 +39,8 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::with('category')->paginate();
-        $products->withPath('/api/products/');
-
-//        ddd( $products );
 
         return view('products.index')->with( [
-            'links' => $this->links,
             'products' => $products,
         ]);
     }

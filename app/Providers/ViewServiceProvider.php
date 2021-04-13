@@ -1,12 +1,15 @@
 <?php
 
+
 namespace App\Providers;
 
+use App\Http\View\Composers\ProductLinksComposer;
+use Carbon\Laravel\ServiceProvider;
 use Illuminate\Support\Facades\View;
-use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class ViewServiceProvider extends ServiceProvider
 {
+
     /**
      * Register any application services.
      *
@@ -22,5 +25,8 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(){}
+    public function boot()
+    {
+        View::composer(['products.*'], ProductLinksComposer::class);
+    }
 }
