@@ -16,7 +16,9 @@
         </div>
         <!-- end congrats -->
         {{--        table --}}
-            @include('products.partials.table')
+            <div class="page_matter__body">
+                @include('products.partials.table')
+            </div>
         {{--      end table  --}}
     </div>
 @endsection

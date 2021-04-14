@@ -26,4 +26,23 @@ class Product extends Model
     public function price(){
         return $this->hasOne(ProductPrice::class, 'product_id');
     }
+
+    public function image(){
+        return $this->hasMany(ProductImage::class,'product_id','id');
+    }
+
+    public function shipping(){
+        return $this->hasOne(ProductInformation::class,'product_id','id');
+    }
+
+    public function meta_information(){
+        return $this->hasOne(ProductMetaInformation::class,'product_id','id');
+    }
+    public function description(){
+        return $this->hasOne(ProductDescription::class,'product_id','id');
+    }
+
+    public function video(){}
+
+
 }

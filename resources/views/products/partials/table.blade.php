@@ -97,7 +97,7 @@
                                         <a href="{{route('products.edit',$product->id)}}"><i class="fa fa-pencil"></i></a>
                                     </span>
                                     <span class="text-red-500">
-                                        <a href="{{route('products.edit',['id' => $product->id])}}"><i class="fa fa-trash"></i></a>
+                                        <a href="{{route('products.edit',$product->id)}}"><i class="fa fa-trash"></i></a>
                                     </span>
                                 </div>
                             </td>

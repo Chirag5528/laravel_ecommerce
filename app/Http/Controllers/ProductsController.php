@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products\Product;
+use App\Models\Products\ProductCategory;
+use App\Models\Products\ProductMetaInformation;
+use App\Models\Products\ProductSubCategory;
+use Database\Seeders\Products\ProductSeeder;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -29,8 +33,9 @@ class ProductsController extends Controller
      */
     public function create(Product $products)
     {
-
-        return view('products.create');
+        $categories = ProductCategory::select('id','name')->where('status','=','1')->orderBy('name')->get();
+        $subCategories = ProductSeeder::select('id','name','category_id')->where('status','=','1')->orderBy('name')->get();
+        return view('products.create',compact('categories','subCategories'));
     }
 
     /**
@@ -63,7 +68,8 @@ class ProductsController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.create',compact('product'));
+        $categories = ProductCategory::with('subCategories')->orderBy('name')->get();
+        return view('products.edit',compact('product','categories'));
     }
 
     /**

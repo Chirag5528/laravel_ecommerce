@@ -3,6 +3,7 @@
 
 namespace App\Providers;
 
+use App\Http\View\Composers\CategoryListComposer;
 use App\Http\View\Composers\ProductLinksComposer;
 use Carbon\Laravel\ServiceProvider;
 use Illuminate\Support\Facades\View;

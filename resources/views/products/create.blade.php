@@ -7,7 +7,5 @@
                 <h1 class="text-4xl font-normal">Add Product</h1>
             </div>
         <!-- end congrats -->
-        {{ $product }}
-
     </div>
 @endsection

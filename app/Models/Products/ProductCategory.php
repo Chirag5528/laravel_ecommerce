@@ -11,4 +11,8 @@ class ProductCategory extends Model
     use HasFactory;
     use SoftDeletes;
     protected $fillable = ['name','status'];
+
+    public function subCategories(){
+        return $this->hasMany(ProductSubCategory::class,'category_id','id');
+    }
 }
