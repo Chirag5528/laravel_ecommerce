@@ -55,6 +55,14 @@
     </div>
 @endsection
 @push('js')
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/inline/ckeditor.js"></script>
+    <script>
+        InlineEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
     <script>
         /* Optional Javascript to close the radio button version by clicking it again */
         var myRadios = document.getElementsByName('tabs2');
